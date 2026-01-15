@@ -1,10 +1,54 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My App</title>
+  <title>My Web App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      text-align: center;
+      padding-top: 60px;
+    }
+
+    .card {
+      background: white;
+      width: 300px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Hello, my first app 🚀</h1>
+  <div class="card">
+    <h1>Welcome 👋</h1>
+    <p>This is my first web app.</p>
+    <button onclick="sayHello()">Click me</button>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    function sayHello() {
+      document.getElementById("message").innerText =
+        "You just clicked the button 🎉";
+    }
+  </script>
 </body>
 </html>
-
